@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    flex: 0 auto;
+    flex-direction: column;
+    display: flex;
+    width: 400px;
+    height: 600px;
+    border: solid red;
+    margin: 10%;
+}
+
+.display {
+    border: solid blue;
+    height: 100px;
+}
+
+.keypad {
+    display: flex;
+    border: solid green;
+    flex: 1 auto;
+    flex-direction: column;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: solid gray;
+}
+
+.first > #delete{
+    flex: 2;
+}
+
+.fifth > #zero{
+    flex: 2;
+}
+
+.button {
+    flex: 1;
+    display: flex;
+    border: solid purple;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide-borders * {
+    border-width: 0px !important;
+}
