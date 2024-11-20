@@ -1,6 +1,8 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
 }
 
 .calculator {
@@ -9,20 +11,39 @@ body {
     display: flex;
     width: 400px;
     height: 600px;
-    border: solid red;
     margin: 10%;
+    box-sizing: border-box;
+    background-color: #1C1C1C;
+    border-radius: 20px;
 }
 
 .display {
-    border: solid blue;
-    height: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-height: 25%;
+    color: white;
+    align-items: end;
+    justify-content: end;
+    margin: 0px 5px;
+    padding: 0px 15px;
+    font-size: 50pt;
+    max-width: 100%;
+}
+
+.display > .history {
+    font-size: 20pt;
+    color: grey;
+    margin: 0 5px;
 }
 
 .keypad {
     display: flex;
-    border: solid green;
+    /* border: solid green; */
     flex: 1 auto;
     flex-direction: column;
+    padding: 10px;
+    padding-top: 0px;
 }
 
 .row {
@@ -30,25 +51,40 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-    border: solid gray;
-}
-
-.first > #delete{
-    flex: 2;
-}
-
-.fifth > #zero{
-    flex: 2;
 }
 
 .button {
     flex: 1;
     display: flex;
-    border: solid purple;
     margin: 5px;
-    padding: 5px;
     align-items: center;
     justify-content: center;
+    border-radius: 50rem;
+    color: white;
+    font-size: 25pt;
+}
+
+.black {
+    background-color: #505050;
+}
+
+.grey {
+    background-color: #D4D4D2;
+}
+
+.orange {
+    background-color: #FF9500;
+}
+
+.fifth > #zero,
+.first > #delete {
+    flex: 2;
+    max-width: 50%;
+}
+
+#equals,
+#point {
+    max-width: 25%;
 }
 
 .hide-borders * {
