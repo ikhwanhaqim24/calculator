@@ -28,3 +28,16 @@ const operate = (operator, firstNumber, secondNumber) => {
     };
     return result;
 };
+
+const buttons = document.querySelectorAll(".button");
+const displayCurrent = document.querySelector(".display > .current");
+const displayHistory = document.querySelector(".display > .history");
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (button.id == "ac") {
+            displayCurrent.textContent = "0";
+            displayHistory.textContent = "0";
+        };
+    })
+})
